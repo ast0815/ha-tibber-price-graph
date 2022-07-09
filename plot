@@ -9,5 +9,6 @@ set output "prices.svg"
 set title "Hourly Electricity Prices"
 set key top center
 
+load "nowline.gp"
 plot 'today.dat' using 1:2 title 'Today' with steps, \
      'tomorrow.dat' using 1:2 title 'Tomorrow' with steps
