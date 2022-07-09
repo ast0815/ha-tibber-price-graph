@@ -10,6 +10,8 @@ prices using the Tibber API.
 
     - `gnuplot`
     - `jq`
+    - `imagemagick`
+    - `ttf-dejavu`
 
 3.  Log into the SSH server on Home Assistant
 4.  Clone this repository into `/root/share/tibber-plots/`
@@ -19,6 +21,7 @@ prices using the Tibber API.
 8.  Create the folder `/root/config/www/plots`
 9.  Still in `tibber-plots/`, run `./install-cronjob.sh`
 10. If you run `/etc/periodic/15min/tibber-pricegraph-cronjob.sh` now, it should create a file `prices.svg` in `/root/config/www/plots/`
-11. To add the plot to any of your dashboards, create a picture tile and enter `/local/plots/prices.svg` as the image path.
+11. To add the plot to any of your dashboards, create a Generc Camera and use `http://127.0.0.1:8123/local/plots/prices.png` as the image path.
 
 The plots should be updated every 15 minutes.
+You will have to re-do the `install-conjob.sh` step every time the SSH container is restarted.
