@@ -18,7 +18,7 @@ prices using the Tibber API.
 5.  Switch to that directory
 6.  Create a file `token` that contains your Tibber API token
 7.  If you run `./make-graph.sh` now, it should create a plot `prices.svg`
-8.  Create the folder `/root/config/www/plots`
+8.  Create these folder: `/root/config/www/plots`, `/root/config/www/states`
 9.  Still in `tibber-plots/`, run `./install-cronjob.sh`
 10. If you run `/etc/periodic/15min/tibber-pricegraph-cronjob.sh` now, it should create a file `prices.svg` in `/root/config/www/plots/`
 11. To add the plot to any of your dashboards, create a Generc Camera and use `http://127.0.0.1:8123/local/plots/prices.png` as the image path.

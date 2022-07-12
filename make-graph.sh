@@ -25,3 +25,6 @@ gnuplot plot
 
 # Also convert to png file
 convert prices.svg prices.png
+
+# Calculate comparisons
+./check-lower-in-pair.sh
