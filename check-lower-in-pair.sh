@@ -12,10 +12,10 @@ then
     curl -X POST -H "Authorization: Bearer $TOKEN" \
         -H "Content-Type: application/json" \
         -d '{"state": "on", "attributes": {"friendly_name": "Electricity Price lower in pair"}}' \
-        http://localhost:8123/api/states/binary_sensor.electricity_price_lower_in_pair
+        http://homeassistant.local:8123/api/states/binary_sensor.electricity_price_lower_in_pair
 else
     curl -X POST -H "Authorization: Bearer $TOKEN" \
         -H "Content-Type: application/json" \
         -d '{"state": "off", "attributes": {"friendly_name": "Electricity Price lower in pair"}}' \
-        http://localhost:8123/api/states/binary_sensor.electricity_price_lower_in_pair
+        http://homeassistant.local:8123/api/states/binary_sensor.electricity_price_lower_in_pair
 fi
