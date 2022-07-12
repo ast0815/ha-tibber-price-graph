@@ -7,7 +7,7 @@ OTHER_PRICE=$(grep $OTHER:00:00 today.dat | cut -f 2 -d,)
 
 read TOKEN <ha-token
 
-if [[ $NOW_PRICE -lt $OTHER_PRICE ]]
+if [[ $(echo "$NOW_PRICE < $OTHER_PRICE" | bc) == "1" ]]
 then
     curl -X POST -H "Authorization: Bearer $TOKEN" \
         -H "Content-Type: application/json" \
