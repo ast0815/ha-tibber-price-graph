@@ -1,7 +1,7 @@
 #!/bin/bash
 
 HOUR=$(date +%H)
-OTHER=$(($HOUR + 1 - 2 * ($HOUR % 2)))
+OTHER=$((${HOUR#0} + 1 - 2 * (${HOUR#0} % 2)))
 # Fix zero padding
 printf -v OTHER %02g $OTHER
 NOW_PRICE=$(grep $HOUR:00:00 today.dat | cut -f 2 -d,)
